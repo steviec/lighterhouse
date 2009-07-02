@@ -1,0 +1,100 @@
+Project management requirements:
+
+v. 0.0
+high level
+-Top:
+--simple milestone view of tickets
+--shows expected date in milestone dropdown
+-L buckets: list of each dev + tickets (unordered)
+-R bucket: all other tix; can filter by unassigned, project
+-Bottom:
+--shows simple view of tickets
+
+Actions:
+-drag tickets from R bucket to L user
+
+details
+-cache all tix locally
+-simple wrapper that keeps order of tickets per dev per project
+
+==============
+
+v. 0.1
+-mass assign/close/move tickets (clickable)
+-add initiatives(milestones), filtering
+-initiatives
+--same as milestones?  or super-set that has multiple milestones?
+--start/end dates
+--message log of updates to the initiative
+--PM indicated
+
+v. 0.2
+- all devs view
+-- list of devs' tickets in separate columns
+-- filter by milestone or specific devs
+-- on-ice column on R; can drag into on-deck list for different devs
+-- status: open = on-ice
+-- status: scheduled = on-deck
+-- status: in-progress = top of list, colored differently
+-- show ticket priority (simple ordering)
+
+v. 0.3
+- calendar view
+-- see all milestones across projects on a calendar timeline
+-+ draggable milestone times
+
+v. 0.4
+fun to have
+- email after deploy
+-- lists devs/tickets with hotlinks to LH
+
+biggest problems:
+- how to save list ordering for each dev on LH? checkout API
+-- acts_as_list, store in sqlite
+- should open tix be on-ice, and scheduled tix be on-deck?
+-- what if you just want to see each dev and all tix associated?
+
+========
+
+lighterhouse:
+-initiative by initiative, see all user tickets basis
+-e.g. email blast, needs:
+
+erik:
+-collect links, write email
+
+bekcy:
+-vet email
+
+jeff:
+-execute email
+
+=======================
+
+flow
+-need to have a vetting process with projects
+-before deployment!  closed, qa, deployed
+
+===================
+
+
+LINKS
+PM overview -- can we have better functionality?
+http://spreadsheets.google.com/a/animoto.com/ccc?key=p6kxdtOJAIA-vMfLWlz6gQA&inv=stevie@animoto.com&t=942785771244970972&guest
+Milestones:
+-target dates + 'unscheduled'
+-PM noted (part of text?)
+-
+
+caching
+http://github.com/latimes/cached_resource/tree/master
+
+drag n drop
+http://blog.airbladesoftware.com/2008/3/19/moving-between-lists-with-acts_as_list
+http://harryche2008.wordpress.com/2008/07/19/how-to-do-ajax-style-drag-n-drop-sorting-with-rails/
+http://view.jquery.com/tags/ui/latest/demos/functional/#ui.sortable
+
+timeline view
+http://code.google.com/p/simile-widgets/
+http://simile-widgets.googlecode.com/svn/timeline/trunk/src/webapp/examples/religions/religions.html
+

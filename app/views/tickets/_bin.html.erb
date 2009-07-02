@@ -1,0 +1,9 @@
+<div class="ticket_bin" id="<%= bin.first.assigned_user_id rescue nil %>">
+		<%= bin.first.assigned_user_name rescue 'Unassigned' %>
+    <ul class="ticket_list" id="<%= bin.first.assigned_user_id rescue nil %>">
+<% for ticket in bin %>
+        <li id="<%= ticket.unique_id %>"><%= ticket.title.length > 30 ? ticket.title[0..30] + '...' : ticket.title %><a class='delete' href=#>X</a></li>
+<% end %>
+    </ul> 
+</div>
+

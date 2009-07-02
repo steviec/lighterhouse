@@ -1,0 +1,19 @@
+Problem
+We have a lot of initiatives.  These each have a PM, a message thread, a group of stakeholders, an associated schedule/deadline, and tickets.  Possibly even sub-milestones.  
+
+There is no "initiative" view in lighthouse.  We could hack in on in one of two ways:
+
+1) Milestones
+Those are project-specific, don't have message thread, stakeholder list, or a PM. 
+
+2) Tickets
+We could have a ticket+milestone represent an initiative.  We would keep these in an Initiatives project, they would have a message thread, stakeholders, and a PM.  The milestone would have to be copied over to all other projects, and we'd have to keep that list of IDs somewhere.
+
+Initiative
+-has a PM
+-has a thread of messages
+-has a deadline
+-has tickets
+
+Thought:
+-what's the simplest we could do?
