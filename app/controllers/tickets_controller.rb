@@ -4,7 +4,7 @@ require 'lighthouse_api_extensions'
 # require 'vendor/plugins/cached_resource/init'
 
 Lighthouse.account = 'animoto'
-Lighthouse.authenticate('stevie@animoto.com', PASSWORD)
+Lighthouse.authenticate('stevie@animoto.com', 'yourbull1')
 ActiveResource::Base.logger = ActiveRecord::Base.logger
 
 class TicketsController < ApplicationController
